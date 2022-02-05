@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    {{msg1}}
+    <p class="text-class">{{msg1}}</p>
+    <input type="text" v-model="msg1">
+    <button v-on:click="handleClick">按钮</button>
+  </div>
+</body>
+<script src="./js/dep.js"></script>
+<script src="./js/watcher.js"></script>
+<script src="./js/compiler.js"></script>
+<script src="./js/observer.js"></script>
+<script src="./js/proxy.js"></script>
+<script src="./js/vue.js"></script>
+
+<script>
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      msg1: '加上',
+      msg2: '所以'
+    },
+    methods: {
+      handleClick() {
+        alert(1)
+      }
+    }
+  })
+</script>
+
+</html>
